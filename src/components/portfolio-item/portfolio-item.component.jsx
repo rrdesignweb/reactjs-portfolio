@@ -26,14 +26,13 @@ const PortfolioItem = ({ title, description, tech, links, imageURL }) => {
             <TechItem item={tech} />
           ))}
         </TechContainer>
-        <LinkContainer>
-          <SpanPrimary>
-            <i className="fa fa-link"></i>&nbsp;
-          </SpanPrimary>
-          {/* {links.map(link => {
-              return (<LinkItem url={link.url} linkName={link.linkName} />);
-          })} */}
-        </LinkContainer>
+        {links.length > 0 ? (
+          <LinkContainer>
+            <SpanPrimary>
+              <i className="fa fa-link"></i>&nbsp;
+            </SpanPrimary>
+          </LinkContainer>
+        ) : null}
       </ContentFooter>
     </ContentContainer>
   );

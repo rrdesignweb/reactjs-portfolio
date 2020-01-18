@@ -7,5 +7,6 @@ export default {
     linkColor: "#b7336f",
     linkHover: "#770e3d",
     white: "#ffffff",
+    lightGrey:"#f9f9f9",
     black: "#000000",
 };

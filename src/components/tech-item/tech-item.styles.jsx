@@ -4,7 +4,7 @@ import Colors from "../../constants/Colors";
 export const TechStyle = styled.li`
   list-style: none;
   font-family: "Pathway Gothic One", sans-serif !important;
-  background: ${Colors.white};
+  background: ${Colors.lightGrey};
   color: ${Colors.primaryGrey};
   float: left;
   font-weight: 400;

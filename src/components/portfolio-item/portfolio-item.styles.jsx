@@ -3,50 +3,13 @@ import Colors from "../../constants/Colors";
 
 export const ContentContainer = styled.div`
   height: 100%;
-  padding: 100px;
+  padding: 85px;
   display: flex;
   justify-content: center;
   flex-flow: column nowrap;
   color: ${Colors.white};
-  background: rgba(219, 219, 219, 1);
-  background: -moz-linear-gradient(
-    -45deg,
-    rgba(219, 219, 219, 1) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  background: -webkit-gradient(
-    left top,
-    right bottom,
-    color-stop(0%, rgba(219, 219, 219, 1)),
-    color-stop(100%, rgba(255, 255, 255, 1))
-  );
-  background: -webkit-linear-gradient(
-    -45deg,
-    rgba(219, 219, 219, 1) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  background: -o-linear-gradient(
-    -45deg,
-    rgba(219, 219, 219, 1) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  background: -ms-linear-gradient(
-    -45deg,
-    rgba(219, 219, 219, 1) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  background: linear-gradient(
-    135deg,
-    rgba(219, 219, 219, 1) 0%,
-    rgba(255, 255, 255, 1) 100%
-  );
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#dbdbdb', endColorstr='#ffffff', GradientType=1 );
+  background: rgba(254, 254, 254, 1);
   text-transform: uppercase;
-  will-change: transform;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  -webkit-transition: all 1.9s cubic-bezier(0.22, 0.44, 0, 1);
-  transition: all 1.9s cubic-bezier(0.22, 0.44, 0, 1);
   padding-top: 20px;
 `;
 
@@ -94,5 +57,6 @@ export const LinkContainer = styled.div`
 `;
 
 export const Image = styled.img`
-  width: 93%;
+  width: 80%;
+  align-self:center;
 `;
