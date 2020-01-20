@@ -2,6 +2,8 @@ import React from "react";
 
 import {
   ContentContainer,
+  DutiesContainer, 
+  DutyItem,
   TechContainer,
   ContentFooter,
   ContentTitle,
@@ -12,27 +14,38 @@ import {
 } from "./portfolio-item.styles";
 
 import TechItem from "../tech-item/tech-item.component";
-// import LinkItem from "../link-item/link-item.component";
+import LinkItem from "../link-item/link-item.component";
 
-const PortfolioItem = ({ title, description, tech, links, imageURL }) => {
+const PortfolioItem = ({
+  title,
+  description,
+  duties,
+  tech,
+  links,
+  imageURL
+}) => {
   return (
     <ContentContainer>
       <Image src={imageURL} alt="portfolio-image" />
       <ContentTitle>{title}</ContentTitle>
       <Paragraph>{description}</Paragraph>
+      <DutiesContainer>
+        {duties.map((duty, index) => (
+          <DutyItem key={index}>{duty}</DutyItem>
+        ))}
+      </DutiesContainer>
       <ContentFooter>
         <TechContainer>
-          {tech.map(tech => (
-            <TechItem item={tech} />
+          {tech.map((tech, index) => (
+            <TechItem key={index} item={tech} />
           ))}
         </TechContainer>
-        {links.length > 0 ? (
-          <LinkContainer>
-            <SpanPrimary>
-              <i className="fa fa-link"></i>&nbsp;
-            </SpanPrimary>
-          </LinkContainer>
-        ) : null}
+        <LinkContainer>
+          <SpanPrimary>
+            <i className="fa fa-link"></i>&nbsp;
+          </SpanPrimary>
+          <LinkItem url={links.url} linkName={links.linkName} />
+        </LinkContainer>
       </ContentFooter>
     </ContentContainer>
   );

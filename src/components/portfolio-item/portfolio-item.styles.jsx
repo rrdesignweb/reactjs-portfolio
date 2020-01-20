@@ -9,6 +9,44 @@ export const ContentContainer = styled.div`
   flex-flow: column nowrap;
   color: ${Colors.white};
   background: rgba(254, 254, 254, 1);
+  background: -moz-linear-gradient(
+    top,
+    rgba(237, 237, 237, 1) 0%,
+    rgba(246, 246, 246, 1) 47%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: -webkit-gradient(
+    left top,
+    left bottom,
+    color-stop(0%, rgba(237, 237, 237, 1)),
+    color-stop(47%, rgba(246, 246, 246, 1)),
+    color-stop(100%, rgba(255, 255, 255, 1))
+  );
+  background: -webkit-linear-gradient(
+    top,
+    rgba(237, 237, 237, 1) 0%,
+    rgba(246, 246, 246, 1) 47%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: -o-linear-gradient(
+    top,
+    rgba(237, 237, 237, 1) 0%,
+    rgba(246, 246, 246, 1) 47%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: -ms-linear-gradient(
+    top,
+    rgba(237, 237, 237, 1) 0%,
+    rgba(246, 246, 246, 1) 47%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(237, 237, 237, 1) 0%,
+    rgba(246, 246, 246, 1) 47%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff', GradientType=0 );
   text-transform: uppercase;
   padding-top: 20px;
 `;
@@ -23,15 +61,31 @@ export const SpanPrimary = styled.span`
 
 export const TechContainer = styled.ul`
   justify-content: flex-start;
+  padding-top: 5px;
+`;
+
+export const DutiesContainer = styled.ul`
+  text-align: left;
+  padding-top: 20px;
+  border-bottom: 1px solid ${Colors.lightGrey};
+`;
+
+export const DutyItem = styled.li`
+  padding: 10px;
+  color: ${Colors.secondaryGrey};
+  text-transform: none;
+  text-transform: none;
+  list-style: none;
+  border-top: 1px solid ${Colors.lightGrey};
 `;
 
 export const ContentTitle = styled.div`
-  font-size: 2em;
+  font-size: 2.2em;
   line-height: 1.5em;
   padding-bottom: 10px;
   color: ${Colors.highlightColor};
   text-align: left;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid ${Colors.lightGrey};
 `;
 
 export const ContentSubTitle = styled.div`
@@ -45,8 +99,9 @@ export const Paragraph = styled.p`
   text-align: left;
   text-transform: none;
   color: ${Colors.pGrey};
-  line-height: 1.8em;
-  padding-top: 5px;
+  line-height: 1.7em;
+  padding-top: 10px;
+  font-size: 1.2em;
 `;
 
 export const LinkContainer = styled.div`
@@ -58,5 +113,5 @@ export const LinkContainer = styled.div`
 
 export const Image = styled.img`
   width: 80%;
-  align-self:center;
+  align-self: center;
 `;

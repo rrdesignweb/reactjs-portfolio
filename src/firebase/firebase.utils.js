@@ -16,11 +16,12 @@ firebase.initializeApp(config);
 
 export const convertPortfolioSnapshotToMap = portfolio => {
   const transformedPortfolio = portfolio.docs.map(doc => {
-    const { title, description, imageURL, tech, links } = doc.data();
+    const { title, description, duties, imageURL, tech, links } = doc.data();
     return {
       id: doc.id,
       title,
       description,
+      duties,
       imageURL,
       tech,
       links
