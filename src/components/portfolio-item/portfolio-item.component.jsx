@@ -31,11 +31,7 @@ const PortfolioItem = ({
       <Paragraph>{description}</Paragraph>
       <DutiesContainer>
         {duties.map((duty, index) => (
-<<<<<<< HEAD
           <DutyItem key={index}><i className="fa fa-angle-right"></i>&nbsp;&nbsp;{duty}</DutyItem>
-=======
-          <DutyItem key={index}>{duty}</DutyItem>
->>>>>>> cf720aa59cb4f59532c5b83c99912073d460de27
         ))}
       </DutiesContainer>
       <ContentFooter>
