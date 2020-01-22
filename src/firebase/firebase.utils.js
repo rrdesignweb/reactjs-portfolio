@@ -27,6 +27,7 @@ export const convertPortfolioSnapshotToMap = portfolio => {
       links
     };
   });
+  
   return transformedPortfolio.reduce((accumulator, portfolio) => {
     accumulator[portfolio.title.toLowerCase()] = portfolio;
     return accumulator;

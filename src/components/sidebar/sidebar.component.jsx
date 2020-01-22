@@ -14,8 +14,8 @@ const Sidebar = () => {
       position: "fixed",
       width: "20px",
       height: "12px",
-      left: "36px",
-      top: "36px"
+      left: "35px",
+      top: "35px"
     },
     bmBurgerBars: {
       background: "rgba(255, 255, 255, 0.9)"

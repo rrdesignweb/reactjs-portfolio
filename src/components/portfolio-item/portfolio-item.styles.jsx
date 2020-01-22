@@ -4,6 +4,9 @@ import Colors from "../../constants/Colors";
 export const ContentContainer = styled.div`
   height: 100%;
   padding: 85px;
+  @media screen and (max-width: 800px) {
+    padding: 35px;
+  }
   display: flex;
   justify-content: center;
   flex-flow: column nowrap;
@@ -76,7 +79,7 @@ export const DutyItem = styled.li`
   text-transform: none;
   list-style: none;
   border-top: 1px solid ${Colors.lightGrey};
-  &:first-child{
+  &:first-child {
     border-top: none;
   }
 `;
