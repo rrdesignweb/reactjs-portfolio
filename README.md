@@ -1,1 +1,3 @@
-**Porfolio Project Using React, Redux & Firestore**
+**Portfolio Project Using React, Redux & Firestore**
+
+*More info to come...*
