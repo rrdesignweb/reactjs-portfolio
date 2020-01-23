@@ -52,6 +52,15 @@ export const ContentContainer = styled.div`
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff', GradientType=0 );
   text-transform: uppercase;
   padding-top: 20px;
+  animation: fadein 2s;
+  @keyframes fadein {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 `;
 
 export const ContentFooter = styled.div`
