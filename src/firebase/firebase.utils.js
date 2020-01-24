@@ -32,6 +32,7 @@ export const convertPortfolioSnapshotToMap = portfolio => {
     accumulator[portfolio.title.toLowerCase()] = portfolio;
     return accumulator;
   }, {});
+  
 };
 
 export const firestore = firebase.firestore();
