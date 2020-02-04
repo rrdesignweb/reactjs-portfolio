@@ -50,12 +50,12 @@ const Portfolio = () => {
 
   return (
     <PortfolioWrapper>
-      {!loading ? (
+      {loading ? (
+        <WithSpinner />
+      ) : (
         portfolio.map(({ id, ...otherPorfolioProps }) => (
           <PortfolioItem key={id} {...otherPorfolioProps} />
         ))
-      ) : (
-        <WithSpinner />
       )}
     </PortfolioWrapper>
   );
