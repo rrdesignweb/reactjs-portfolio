@@ -1,0 +1,146 @@
+@use "../../scss/config/variables" as *;
+@use "../../scss/config/mixins" as *;
+@use "../../scss/config/layers" as *;
+
+.PortfolioItem {
+    height: 100%;
+    padding: 85px 150px;
+    @media screen and (max-width: 800px) {
+        padding: 45px;
+    }
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+    color: #fff;
+    background: rgba(254, 254, 254, 1);
+    background: linear-gradient(
+        to bottom,
+        rgba(237, 237, 237, 1) 0%,
+        rgba(246, 246, 246, 1) 10%,
+        rgba(255, 255, 255, 1) 50%,
+        rgba(255, 255, 255, 1) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ededed', endColorstr='#ffffff', GradientType=0 );
+    text-transform: uppercase;
+    animation: fadein 1s;
+    .title {
+        //font-size: rem-calc(28);
+        line-height: 1.5em;
+        padding-bottom: 10px;
+        color: $highlightColor;
+        text-align: left;
+        border-bottom: 1px solid $lightGrey;
+    }
+    .description {
+        font-size: rem-calc(16);
+        line-height: 1.8em;
+        color: #252729;
+        text-align: left;
+    }
+    .duties {
+        text-align: left;
+        //padding-top: 20px;
+        .duties-item {
+            padding: 10px 0px;
+            margin-left: 15px;
+            color: $secondaryGrey;
+            text-transform: none;
+            list-style: none;
+            border-top: 1px solid $lightGrey;
+            font-size: rem-calc(14);
+            display:flex;
+            .list-icon {
+                margin-right:15px;
+            }
+            &:first-child {
+                border-top: none;
+            }
+        }
+    }
+    ul {
+        justify-content: flex-start;
+        padding-top: 5px;
+        li {
+            list-style: none;
+            background: $lightGrey;
+            color: $primaryGrey;
+            float: left;
+            font-weight: 400;
+            white-space: nowrap;
+            vertical-align: middle;
+            user-select: none;
+            border: 1px solid transparent;
+            text-align: left;
+            margin-right: 5px;
+            margin-bottom: 5px;
+            padding: 0.375rem 0.75rem;
+            font-size: rem-calc(12);
+            line-height: 1.5;
+            border-radius: 0.25rem;
+        }
+    }
+    p {
+        text-align: left;
+        text-transform: none;
+        color: $pGrey;
+        line-height: 1.7em;
+        padding-top: 10px;
+        font-size: rem-calc(18);
+    }
+    .img-wrapper  {
+       
+        .background-image {
+            position: relative;
+            overflow: hidden;
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 100%;
+            padding-top: 56.25%;
+            margin-bottom: 30px;
+            background-color: #eee;
+            z-index: layer("background-img");
+        }
+    }
+   
+    .portfolio-item-footer {
+        padding-top: 20px;
+        .link-container {
+            width: 100%;
+            justify-content: flex-start;
+            display: flex;
+            padding-top: 20px;
+            span {
+                color: $primaryGrey;
+            }
+            .link {
+                color: $linkColor;
+                font-size: rem-calc(14);
+                text-transform: uppercase;
+                text-decoration: none;
+                list-style: none;
+                &:hover {
+                    color: $linkHover;
+                }
+                &::after {
+                    content: "/";
+                    padding-left: 5px;
+                    padding-right: 5px;
+                }
+                &:last-child {
+                    &:after {
+                        content: "";
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
