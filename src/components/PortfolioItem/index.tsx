@@ -1,7 +1,17 @@
 import React from "react";
 import "./index.scss";
 
-const PortfolioItem = ({
+interface Props {
+  key: any;
+  title: string;
+  description: string;
+  duties: string[];
+  tech: string[];
+  links: any[];
+  imageURL: string
+}
+
+const PortfolioItem: React.FC<Props> = ({
   title,
   description,
   duties,
@@ -12,7 +22,7 @@ const PortfolioItem = ({
   return (
     <div className="PortfolioItem">
       <div className="img-wrapper">
-         <div className="background-image" style={{ backgroundImage: `url(${imageURL})` }} />
+        <div className="background-image" style={{ backgroundImage: `url(${imageURL})` }} />
       </div>
       <h3 className="title">{title}</h3>
       <p className="description">{description}</p>

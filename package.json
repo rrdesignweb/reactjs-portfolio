@@ -3,14 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": "14.0.0"
+    "node": "12.13.0"
   },
   "dependencies": {
+    "@types/jest": "^27.4.0",
+    "@types/node": "^17.0.10",
+    "@types/react-dom": "^17.0.11",
     "firebase": "^7.6.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "^5.0.0",
-    "sass": "^1.45.2"
+    "sass": "^1.45.2",
+    "typescript": "^4.5.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -26,5 +30,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@types/react": "^17.0.38"
+  }
 }

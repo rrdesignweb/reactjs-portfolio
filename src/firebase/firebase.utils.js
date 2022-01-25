@@ -14,11 +14,14 @@ const config = {
   measurementId: process.env.FIREBASE_MEASUREMENT_ID,
 };
 
-firebase.initializeApp(config);
+if (firebase.apps.length === 0) {
+  firebase.initializeApp(config);
+}
 
 export const convertPortfolioSnapshotToMap = (portfolio) => {
   const transformedPortfolio = portfolio.docs.map((doc) => {
-    const { date, title, description, duties, imageURL, tech, links } = doc.data();
+    const { date, title, description, duties, imageURL, tech, links } =
+      doc.data();
     return {
       id: doc.id,
       date,

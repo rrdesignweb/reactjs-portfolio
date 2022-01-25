@@ -14,12 +14,12 @@ const App = () => {
   return (
     <div className="App">
       <div className={`top-nav-bar ${!scroll ? "scroll-fixed" : ""} `} />
-      <Header />
-      <Sidebar />
-      <SocialIcons />
-      <About />
-      <Portfolio />
-      <Footer />
+        <Header />
+        <Sidebar />
+        <SocialIcons />
+        <About />
+        <Portfolio />
+        <Footer />
     </div>
   );
 };
