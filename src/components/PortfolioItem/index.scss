@@ -48,9 +48,9 @@
             list-style: none;
             border-top: 1px solid $lightGrey;
             font-size: rem-calc(14);
-            display:flex;
+            display: flex;
             .list-icon {
-                margin-right:15px;
+                margin-right: 15px;
             }
             &:first-child {
                 border-top: none;
@@ -87,8 +87,7 @@
         padding-top: 10px;
         font-size: rem-calc(18);
     }
-    .img-wrapper  {
-       
+    .img-wrapper {
         .background-image {
             position: relative;
             overflow: hidden;
@@ -101,7 +100,7 @@
             z-index: layer("background-img");
         }
     }
-   
+
     .portfolio-item-footer {
         padding-top: 20px;
         .link-container {

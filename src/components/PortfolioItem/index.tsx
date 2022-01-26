@@ -1,8 +1,7 @@
 import React from "react";
 import "./index.scss";
 
-interface Props {
-  key: any;
+export interface PropTypes {
   title: string;
   description: string;
   duties: string[];
@@ -11,7 +10,7 @@ interface Props {
   imageURL: string
 }
 
-const PortfolioItem: React.FC<Props> = ({
+const PortfolioItem: React.FC<PropTypes> = ({
   title,
   description,
   duties,
