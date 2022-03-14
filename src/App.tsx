@@ -15,7 +15,6 @@ const App = () => {
     <div className="App">
       <div className={`top-nav-bar ${!scroll ? "scroll-fixed" : ""} `} />
         <Header />
-        <Sidebar />
         <SocialIcons />
         <About />
         <Portfolio />
