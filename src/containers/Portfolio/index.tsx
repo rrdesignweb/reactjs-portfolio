@@ -2,7 +2,7 @@ import React, { useEffect, useReducer, useState } from "react";
 import PortfolioItem from "../../components/PortfolioItem";
 import "./index.scss";
 
-import { PropTypes } from "../../components/PortfolioItem"
+import { IPortfolioItem } from "../../components/PortfolioItem"
 
 import {
   firestore,
@@ -61,7 +61,7 @@ const Portfolio = () => {
         <Spinner />
       ) : (
         portfolio &&
-        portfolio.map((props: PropTypes, idx) => (
+        portfolio.map((props: IPortfolioItem, idx) => (
           <PortfolioItem key={idx} {...props} />
         ))
       )}

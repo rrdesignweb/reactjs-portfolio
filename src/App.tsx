@@ -3,7 +3,6 @@ import "./App.scss";
 
 import Portfolio from "./containers/Portfolio";
 import Header from "./components/Header";
-import Sidebar from "./components/Sidebar";
 import SocialIcons from "./components/SocialIcons";
 import Footer from "./components/Footer";
 import About from "./components/About";

@@ -23,24 +23,6 @@ const SocialIcons = () => {
             <i className="fa fa-linkedin"></i>
           </a>
         </li>
-        <li>
-          <a
-            href="https://stackoverflow.com/users/2277245/roshambo"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fa fa-stack-overflow"></i>
-          </a>
-        </li>
-        <li>
-          <a
-            href="https://codepen.io"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i className="fa-1x fa fa-codepen"></i>
-          </a>
-        </li>
       </ul>
     </div>
   );
