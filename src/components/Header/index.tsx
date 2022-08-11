@@ -1,13 +1,19 @@
+//React + Pkgs
 import React from "react";
+
+//Assets
 import Logo from "../../assets/logo.svg";
-import "./index.scss";
+
+//Styles
+import { StyledScreenReaderOnly } from "../../styles/mixins";
+import { StyledHeader, StyledLogo } from "./styles";
 
 const Header = () => {
   return (
-    <header className="Header">
-      <h1 className="sr-only">Rowan Richardson - Frontend Developer from Melbourne</h1>
-      <img className="logo" src={Logo} alt="logo" />
-    </header>
+    <StyledHeader>
+      <StyledScreenReaderOnly as={"h1"}>Rowan Richardson - Frontend Developer from Melbourne</StyledScreenReaderOnly>
+      <StyledLogo src={Logo} alt="Portfolio Logo" />
+    </StyledHeader>
   );
 };
 

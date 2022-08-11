@@ -1,30 +1,36 @@
+//React + Pkgs
 import React from "react";
-import "./index.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+
+//Styles
+import { StyledSocialIcons, StyledSocialIconsList, StyledSocialIconsListItem, StyledSocialIconsLink } from "./styles";
+
 
 const SocialIcons = () => {
   return (
-    <div className="SocialIcons">
-      <ul>
-        <li>
-          <a
+    <StyledSocialIcons>
+      <StyledSocialIconsList>
+        <StyledSocialIconsListItem>
+          <StyledSocialIconsLink
             href="https://github.com/rrdesignweb"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fa fa-github"></i>
-          </a>
-        </li>
-        <li>
-          <a
+            <FontAwesomeIcon icon={faGithub} />
+          </StyledSocialIconsLink>
+        </StyledSocialIconsListItem>
+        <StyledSocialIconsListItem>
+          <StyledSocialIconsLink
             href="https://au.linkedin.com/in/rowan-richardson-bb285747"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fa fa-linkedin"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
+            <FontAwesomeIcon icon={faLinkedin} />
+          </StyledSocialIconsLink>
+        </StyledSocialIconsListItem>
+      </StyledSocialIconsList>
+    </StyledSocialIcons>
   );
 };
 

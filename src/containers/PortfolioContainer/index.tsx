@@ -1,7 +1,14 @@
+//React + Pkgs
 import React, { useEffect, useReducer, useState } from "react";
-import PortfolioItem from "../../components/PortfolioItem";
-import "./index.scss";
 
+//Components
+import PortfolioItem from "../../components/PortfolioItem";
+import Spinner from "../../components/Spinner";
+import Heading from "../../components/Heading";
+
+//Styles
+import { StyledPortfolioContainer } from "./styles";
+import { StyledContentBlock } from "../../styles/mixins";
 import { IPortfolioItem } from "../../components/PortfolioItem"
 
 import {
@@ -9,7 +16,6 @@ import {
   convertPortfolioSnapshotToMap,
 } from "../../firebase/firebase.utils";
 
-import Spinner from "../../components/Spinner";
 
 //Init state
 const INITIAL_STATE = {
@@ -35,7 +41,7 @@ const updatePortfolio = (portfolioKeys) => ({
   payload: portfolioKeys,
 });
 
-const Portfolio = () => {
+const PortfolioContainer = () => {
   const [loading, setLoading] = useState(true);
   const [state, dispatch] = useReducer(portfolioReducer, INITIAL_STATE);
   const { portfolio } = state;
@@ -53,10 +59,10 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <div className="PortfolioWrapper">
-      <div className="content-block">
-        <h2>Work Highlights</h2>
-      </div>
+    <StyledPortfolioContainer>
+      <StyledContentBlock>
+        <Heading title="Work Highlights" level="h2" />
+      </StyledContentBlock>
       {loading ? (
         <Spinner />
       ) : (
@@ -65,8 +71,8 @@ const Portfolio = () => {
           <PortfolioItem key={idx} {...props} />
         ))
       )}
-    </div>
+    </StyledPortfolioContainer >
   );
 };
 
-export default Portfolio;
+export default PortfolioContainer;

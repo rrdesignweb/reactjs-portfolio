@@ -1,5 +1,12 @@
+//React + Pkgs
 import React from "react";
-import "./index.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faAngleRight, faChain } from "@fortawesome/free-solid-svg-icons";
+
+//Styles
+import { StyledPortfolioItem, StyledPortfolioBgImage, StyledPortfolioDescription, StyledPortfolioDutiesContainer, StyledPortfolioDutiesIcon, StyledPortfolioDutiesItem, StyledPortfolioDutiesItemText, StyledPortfolioImgWrapper, StyledPortfolioItemFooter, StyledPortfolioItemFooterLinkWrapper, StyledPortfolioItemFooterLinkContainer, StyledPortfolioList, StyledPortfolioListItem, StyledPortfolioParagraph, StyledPortfolioItemFooterLink, StyledPortfolioTitle } from "./styles";
+import { theme } from "../../styles/global";
+
 
 export interface IPortfolioItem {
   title: string;
@@ -19,64 +26,52 @@ const PortfolioItem: React.FC<IPortfolioItem> = ({
   imageURL,
 }) => {
   return (
-    <div className="PortfolioItem">
-      <div className="img-wrapper">
-        <div className="background-image" style={{ backgroundImage: `url(${imageURL})` }} />
-      </div>
-      <h3 className="title">{title}</h3>
-      <p className="description">{description}</p>
+    <StyledPortfolioItem>
+      <StyledPortfolioImgWrapper>
+        <StyledPortfolioBgImage style={{ backgroundImage: `url(${imageURL})` }} />
+      </StyledPortfolioImgWrapper>
+      <StyledPortfolioTitle>{title}</StyledPortfolioTitle>
+      <StyledPortfolioDescription>{description}</StyledPortfolioDescription>
       {duties ? (
-        <div className="duties">
+        <StyledPortfolioDutiesContainer>
           {duties.map((duty, index) => (
-            <div className="duties-item" key={index}>
-              <div className="list-icon">
-                <i
-                  className="fa fa-angle-right"
-                  aria-hidden="true"
-                  role="presentation"
-                ></i>
-              </div>
-              <div className="item">{duty}</div>
-            </div>
+            <StyledPortfolioDutiesItem key={index}>
+              <StyledPortfolioDutiesIcon>
+                <FontAwesomeIcon icon={faAngleRight} />
+              </StyledPortfolioDutiesIcon>
+              <StyledPortfolioDutiesItemText>{duty}</StyledPortfolioDutiesItemText>
+            </StyledPortfolioDutiesItem>
           ))}
-        </div>
+        </StyledPortfolioDutiesContainer>
       ) : null}
-      <div className="portfolio-item-footer">
+      <StyledPortfolioItemFooter>
         {tech ? (
-          <ul className="tech">
+          <StyledPortfolioList>
             {tech.map((tech, index) => (
-              <li key={index}>{tech} </li>
+              <StyledPortfolioListItem key={index}>{tech} </StyledPortfolioListItem>
             ))}
-          </ul>
+          </StyledPortfolioList>
         ) : null}
 
         {links ? (
-          <div className="link-container">
+          <StyledPortfolioItemFooterLinkWrapper>
             {Object.values(links).map((link, index) => (
-              <div key={index}>
-                <span>
-                  <i
-                    className="fa fa-link"
-                    aria-hidden="true"
-                    role="presentation"
-                  ></i>
-                  &nbsp;
-                </span>
-
-                <a
-                  className="link"
+              <StyledPortfolioItemFooterLinkContainer key={index}>
+                <FontAwesomeIcon icon={faChain} color={theme.linkColor} />
+                &nbsp;
+                <StyledPortfolioItemFooterLink
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   {link.linkName}
-                </a>
-              </div>
+                </StyledPortfolioItemFooterLink>
+              </StyledPortfolioItemFooterLinkContainer>
             ))}
-          </div>
+          </StyledPortfolioItemFooterLinkWrapper>
         ) : null}
-      </div>
-    </div>
+      </StyledPortfolioItemFooter>
+    </StyledPortfolioItem>
   );
 };
 

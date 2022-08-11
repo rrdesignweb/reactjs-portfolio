@@ -1,19 +1,18 @@
+//React + Pkgs
 import React from "react";
-import "./index.scss";
+
+//Styles
+import { StyledFooter, StyledFooterCopyright, StyledFooterDivider } from "./styles";
 
 const Footer = () => {
   return (
-    <footer>
-      <span className="copyright">
+    <StyledFooter>
+      <StyledFooterCopyright>
         &#169;{" "}Copyright {new Date().getFullYear()}
-      </span>
-      <span>
-        <span className="divider">/</span> Rowan Richardson
-      </span>
-      <span>
-        <span className="divider">/ </span>Frontend Developer
-      </span>
-    </footer>
+      </StyledFooterCopyright>
+      <StyledFooterDivider>/</StyledFooterDivider> Rowan Richardson
+      <StyledFooterDivider>/ </StyledFooterDivider>Frontend Developer
+    </StyledFooter>
   );
 };
 

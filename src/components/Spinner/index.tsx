@@ -1,11 +1,14 @@
+//React + Pkgs
 import React from "react";
-import "./index.scss";
+
+//Styles
+import { StyledSpinner, StyledSpinnerContainer } from "./styles";
 
 const Spinner = () => {
   return (
-    <div className="Spinner">
-      <div className="spinner-container" />
-    </div>
+    <StyledSpinner>
+      <StyledSpinnerContainer />
+    </StyledSpinner>
   );
 };
 
